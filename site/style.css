@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 100%;
+
+    position: static;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+.up, .down {
+    margin: 10px 0 0 0;
+    display: block;
+    width: 100%;
+} 
+.left, .right {
+    display: inline;
+    margin: 10px 0 0 0;
+    padding: 0;
+    width: 49%;
+}
+.stop {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+@media only screen and (min-width: 769px){
+    button {
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    button {
+        height: 20%;
+    }
+    .stop {
+        height: 40%;
+    }
+}

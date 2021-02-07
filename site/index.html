@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <button onclick="makeCall(this, event, 'up')" class="up">Up</button>
+            <button onclick="makeCall(this, event, 'left')" class="left">Left</button>
+            <button onclick="makeCall(this, event, 'right')" class="right">Right</button>
+            <button onclick="makeCall(this, event, 'down')" class="down">Down</button>
+            <button onclick="makeCall(this, event, 'stop')" class="stop">Stop</button>
+        </div>
+        <script>
+            function makeCall(element, ev, path) {
+                const url = `/api/${path}`;
+                element.disabled = true;
+                fetch(url).then(() => {
+                    element.disabled = false;
+                })
+            }
+        </script>
+    </body>
+</html>
